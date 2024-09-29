@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <audio id="background-audio" loop>
+        <source src="audio.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="buh.jpg" alt="Portada de la invitación">
+                <button class="open-card">Abrir galería</button>
+            </div>
+            <div class="card-back">
+                <h1>¡For you Birthday!</h1>
+                <button class="close-card">Cerrar galería</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Visor de la imagen seleccionada -->
+    <div class="image-viewer hidden">
+        <img id="main-image" src="esta si es.png" alt="Imagen principal">
+        <p id="main-caption">Imagen principal de la invitación</p>
+    </div>
+
+    <!-- Galería oculta hasta hacer clic en el botón -->
+    <div class="gallery-container hidden">
+        <h2>Galería de Recuerdos</h2>
+        <div class="gallery-grid">
+            <!-- Las imágenes de la galería -->
+            <div class="gallery-item" data-src="esta si es.png" data-caption="Imagen principal de la invitación">
+                <img src="esta si es.png" alt="Imagen principal de la invitación">
+                <p>Imagen principal de la invitación</p>
+            </div>
+            <div class="gallery-item" data-src="1-Comidas.png" data-caption="Descripción de la Foto 1">
+                <img src="1-Comidas.png" alt="Foto 1">
+                <p>Descripción de la Foto 1</p>
+            </div>
+            <div class="gallery-item" data-src="2-HBD.png" data-caption="Descripción de la Foto 2">
+                <img src="2-HBD.png" alt="Foto 2">
+                <p>Descripción de la Foto 2</p>
+            </div>
+            <div class="gallery-item" data-src="3-Risitas.png" data-caption="Descripción de la Foto 3">
+                <img src="3-Risitas.png" alt="Foto 3">
+                <p>Descripción de la Foto 3</p>
+            </div>
+            <div class="gallery-item" data-src="4-Mkup.png" data-caption="Descripción de la Foto 4">
+                <img src="4-Mkup.png" alt="Foto 4">
+                <p>Descripción de la Foto 3</p>
+            </div>
+            <div class="gallery-item" data-src="5-Obritas.png" data-caption="Descripción de la Foto 5">
+                <img src="5-Obritas.png" alt="Foto 5">
+                <p>Descripción de la Foto 3</p>
+            </div>
+            <div class="gallery-item" data-src="6-Prooo.png" data-caption="Descripción de la Foto 6">
+                <img src="6-Prooo.png" alt="Foto 6">
+                <p>Descripción de la Foto 3</p>
+            </div>
+            <div class="gallery-item" data-src="7-Taraaaa.png" data-caption="Descripción de la Foto 7">
+                <img src="7-Taraaaa.png" alt="Foto 7">
+                <p>Descripción de la Foto 3</p>                
+            </div>
+            <div class="gallery-item" data-src="8-Usx3.png" data-caption="Descripción de la Foto 8">
+                <img src="8-Usx3.png" alt="Foto 8">
+                <p>Descripción de la Foto 3</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
