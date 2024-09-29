@@ -9,27 +9,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainCaption = document.getElementById('main-caption');
     const galleryItems = document.querySelectorAll('.gallery-item');
 
+    // Abrir galería y mostrar visor de imagen
     openButton.addEventListener('click', () => {
         card.classList.add('open');
         galleryContainer.classList.remove('hidden');
-        imageViewer.classList.remove('hidden'); // Mostrar el visor de la imagen principal
+        closeButton.classList.remove('hidden');
         audio.play();
     });
 
+    // Cerrar galería
     closeButton.addEventListener('click', () => {
         card.classList.remove('open');
         galleryContainer.classList.add('hidden');
-        imageViewer.classList.add('hidden'); // Ocultar el visor
+        imageViewer.classList.add('hidden');  // Ocultar el visor de imagen cuando se cierra la galería
+        closeButton.classList.add('hidden');
         audio.pause();
     });
 
-    // Añadir la funcionalidad de seleccionar una imagen de la galería
+    // Mostrar imagen seleccionada en el visor
     galleryItems.forEach(item => {
         item.addEventListener('click', () => {
             const imgSrc = item.getAttribute('data-src');
             const imgCaption = item.getAttribute('data-caption');
-            mainImage.src = imgSrc;
-            mainCaption.textContent = imgCaption;
+            mainImage.src = imgSrc;  // Cambiar la imagen principal
+            mainCaption.textContent = imgCaption;  // Cambiar el texto de la descripción
+            imageViewer.classList.remove('hidden');  // Asegurar que el visor esté visible cuando se seleccione una imagen
         });
     });
 });

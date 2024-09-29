@@ -1,16 +1,19 @@
+/* Estilos generales */
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     margin: 0;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 /* Tarjeta de invitación */
 .card {
     perspective: 2000px;
+    position: relative;
 }
 
 .card-inner {
@@ -29,7 +32,7 @@ body {
 }
 
 .card-front {
-    background-color: #fff;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,17 +63,21 @@ button {
 }
 
 .open-card {
-    background-color: #28a745;
+    background-color: #a72896;
     color: white;
     border: none;
     border-radius: 5px;
 }
 
 .close-card {
-    background-color: #dc3545;
+    background-color: #c7227d;
     color: white;
     border: none;
     border-radius: 5px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10; /* Asegurar que el botón siempre esté visible */
 }
 
 .card.open .card-inner {
@@ -82,13 +89,22 @@ button {
     width: 100%;
     text-align: center;
     margin-top: 20px;
+    display: flex; /* Cambiar display a flex para que se muestre correctamente */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
+
 .image-viewer img {
-    max-width: 600px;
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    margin: 0 auto;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .image-viewer p {
@@ -142,5 +158,5 @@ button {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
